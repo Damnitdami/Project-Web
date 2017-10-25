@@ -3,137 +3,48 @@
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-
 /* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
 body {
-    line-height: 1;
+	line-height: 1;
 }
-
-ol,
-ul {
-    list-style: none;
+ol, ul {
+	list-style: none;
 }
-
-blockquote,
-q {
-    quotes: none;
+blockquote, q {
+	quotes: none;
 }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 @font-face {
@@ -145,11 +56,15 @@ table {
 
 body {
     background-color: #E6E6E9;
-    background-image: url(../images/NS%20image.jpg);
-    background-size: 100vw 12rem;
-    background-repeat: no-repeat;
-    background-position: 0rem 4rem;
-   
+}
+
+body>img {
+   width: 100vw;
+    position: relative; 
+    left: 50%;
+    margin-left: -50vw;
+    max-height: 50vh;
+    object-fit: cover;
 }
 
 h1, h2, h3, p, ul, form, a {
@@ -166,8 +81,13 @@ h1 {
 }
 
 h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
     font-size: 1.5rem;
     color: #083786;
+    
 }
 
 
@@ -185,35 +105,21 @@ header {
 }
 
 header img {
-    width: 1.5rem;
-    margin-top: 1rem;
+    height: 1.5rem;
+    margin-top: 1.25rem;
 }
 
-header img:nth-child(1) {
-    padding-right: 2rem;
-    width: 3.5rem;
-}
-
-header img:nth-child(2) {}
-
-header img:nth-child(3) {
-    float: right;
-    padding-left: 2rem;
-}
-
-header img:nth-child(4) {
-    float: right;
-}
 
 section:first-of-type {
+    position: relative;
     background-color: #083786;
     padding-top: 2rem;
     padding-bottom: 1rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    margin-top: 7rem;
+    margin-top: -3rem;
     border-bottom: 0.2rem solid #C5C5CB;
 }
 
@@ -262,17 +168,17 @@ section select:nth-of-type(2) {
 
 section:nth-of-type(2) {
     background-color: #FFC917;
-    padding: 2rem 1.5rem 1rem 1.5rem;
+    padding: 2rem 2rem 1rem 2rem;
     margin-top: 1rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
 
 section:nth-of-type(2) img {
-display: block;
-    margin-top: -1rem;
-    margin-left: -1rem;
-    width: calc(100% + 2rem);
+    display: block;
+    margin-top: -1.5rem;
+    margin-left: -1.5rem;
+    width: calc(100% + 3rem);
     height:13rem;
     margin-bottom: 1.5rem;
     object-fit: cover;
@@ -280,7 +186,7 @@ display: block;
 
 section:nth-of-type(2) article {
     display: block;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: white;
     margin-top: 1rem;
     border-bottom: 0.2rem solid #C5C5CB;
@@ -288,16 +194,15 @@ section:nth-of-type(2) article {
 
 main {
     background-color: white;
-    padding: 2rem 1.5rem 1rem 1.5rem;
+    padding: 2rem 2rem 1rem 2rem;
     margin-top: 1rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
 
-main>p, section:nth-of-type(2) p {
+main>h2, section:nth-of-type(2) h2 {
     color: #083786;
     padding-bottom: 1rem;
-    font-size: 1rem;
 }
 
 main article { 
@@ -320,6 +225,7 @@ main article img{
 
 article li:nth-of-type(1){
     padding-left: 1.2rem;
+    margin-top:0.3rem;
     background-image:url(../images/plusje.svg);
     background-size: 1rem;
     background-repeat: no-repeat;
@@ -327,7 +233,7 @@ article li:nth-of-type(1){
     }
 
 article li:nth-of-type(2){
-    padding-left: 1.2rem;
+    padding-left: 1.4rem;
     background-image:url(../images/klokje.svg);
     background-size: 1.1rem;
     background-repeat: no-repeat;
@@ -335,10 +241,12 @@ article li:nth-of-type(2){
 }
 
 article footer {
-    float: right;
+    color: #083786;
+    display: block;
+    padding-top: 1rem;
 }
 
-article h2, footer, ul, li {
+article h3, footer, ul, li {
     display: inline-block;
 }
 
@@ -349,4 +257,37 @@ form label {
 
 input:focus {
     background-color: #FFC917;
+}
+
+@media (min-width: 45em) {
+   
+    section>div {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    
+    section>div>select, section>div>fieldset {
+        box-sizing: border-box;
+       width: calc(50% - 0.5rem); 
+    }
+    
+    section>div>article {
+        box-sizing: border-box;
+        width: calc(33% - 0.5rem); 
+    }
+    
+    section:nth-of-type(2) img {
+        height: 20rem;
+    }
+    
+}
+
+@media (min-width: 65em) {
+   
+    body {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+    
 }
