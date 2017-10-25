@@ -50,6 +50,9 @@ table {
 @font-face {
     font-family: "nssans";
     src: url(../fonts/nssans.ttf);
+}
+
+@font-face {
     font-family: "nssansbold";
     src: url(../fonts/nssansbold.ttf);
 }
@@ -67,16 +70,16 @@ body>img {
     object-fit: cover;
 }
 
-h1, h2, h3, p, ul, form, a {
+    h2, h3, p, ul, form, a {
     font-family: "nssans";
 }
 
-select, fieldset {
+h1, select, fieldset {
     font-family: "nssansbold";
 }
 
 h1 {
-   font-size: calc(2rem + 2vw);
+   font-size: calc(1.1rem + 2vw);
     color: white;
 }
 
@@ -127,43 +130,70 @@ section:first-of-type h1 {
     margin-bottom: 2rem;
 }
 
-section fieldset {
-    color: #083786;
-    padding: 1rem;
-    background-color: white;
-    margin-bottom: 1rem;
-    
-    
-}
-
-section legend {
-    font-size: 1rem;
-}
-
-
-
-section input[type="checkbox"] {
-    margin: 5px 0px;
-    width: 1.3rem;
-    height: 1.3rem;
-    border: 0.1rem solid;
-    border-color: #083786;
-}
-
 section select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     width: 100%;
     border: 1.2rem solid white;
-    border-radius: 0;
+    border-radius: 0rem;
     background-color: white;
     font-size: 1rem;
     color: #083786;
+    background-image: url(../images/klokje.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 1.5rem;
 }
 
-section select:nth-of-type(2) {
-    margin-top: 1rem;
+section select:focus {
+    background-image: url(../images/inlogimg.svg);
+}
+
+section fieldset {
+    color: #083786;
+    padding: 1rem;
+    background-color: white;
+    margin-bottom: 1rem;
+    
+}
+
+section div>h2 {
+    font-size: 1.2rem;
+    color: #083786;
+    font-family: "nssansbold";
+    padding-bottom: 1rem;
+    background-color: #FFC917;
+    display: inline-block;
+    padding: 1rem;
+   
+}
+
+section div>div:nth-of-type(1) {
+    margin-bottom: 1rem;
+}
+
+section input[type="checkbox"] {
+    margin-right: 0.5rem;
+    border: 0.2rem solid;
+    border-color: #083786;
+    float: left;
+}
+
+section fieldset>label {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    display: inline-block;
+}
+
+body section:first-of-type>div>div>button{ 
+    background-color: #0079D3;
+    font-family: "nssansbold";
+    font-size: 1rem;
+    color: white;
+    border: 0;
+    padding: 1rem 3rem 1rem 3rem;
+    border-bottom: 0.2rem solid white;
 }
 
 section:nth-of-type(2) {
@@ -250,26 +280,98 @@ article h3, footer, ul, li {
     display: inline-block;
 }
 
-form label {
-    font-size: 1, 2rem;
-    color: #0079D3;
+main.accountformulier h1 {
+    color: #083786;
+    padding-bottom: 2rem;
 }
+
+main.accountformulier>div>form[action="inlogformulier"] {
+    position: relative;
+    background-color: #FFC917; 
+    padding: 2rem;
+}
+
+main.accountformulier>div>form[action="inlogformulier"]>h2 {
+    color: #083786;
+    padding-bottom: 3rem;
+}
+
+main.accountformulier>div>form[action="inlogformulier"]>label {
+    position: relative;
+    display: block;
+    margin-bottom: 1.5rem;
+    color: #083786;
+    font-size: 1.2rem;
+}
+
+main.accountformulier>div>form[action="inlogformulier"]>label>input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 1rem;
+    display: block;
+    padding: 0.7rem;
+}
+
+main.accountformulier>div>form[action="inlogformulier"]>input {
+    background-color: #0079D3;
+    font-family: "nssans";
+    font-size: 1rem;
+    color: white;
+    border: 0;
+    padding: 0.7rem 3rem 0.7rem 1rem;
+    border-bottom: 0.2rem solid #083786;
+    background-image: url(../images/klokje.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+}
+
+main.accountformulier>div>form[action="inlogformulier"]>a{
+    color: #0079D3;
+    padding-top: 2rem;
+/*    margin-left: 9rem;*/
+    display: block;
+}
+
+main.accountformulier>div>div>h3 {
+    padding-left: 2rem; 
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+
+main.accountformulier>div>div>ul>li {
+    display: block;
+    background-image: url(../images/klokje.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 1.5rem;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+main.accountformulier>div>div>a {
+    display: block;
+    padding-top: 3rem;
+    padding-left: 2rem;
+}
+
 
 input:focus {
     background-color: #FFC917;
 }
+
 
 @media (min-width: 45em) {
    
     section>div {
         display: flex;
         justify-content: space-between;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
+
     
-    section>div>select, section>div>fieldset {
+    section>div>div {
         box-sizing: border-box;
-       width: calc(50% - 0.5rem); 
+       width: calc(50% - 1rem); 
     }
     
     section>div>article {
@@ -279,6 +381,44 @@ input:focus {
     
     section:nth-of-type(2) img {
         height: 20rem;
+    }
+    
+    main>div {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    main>div>article {
+        box-sizing: border-box;
+        width: calc(35% - 1rem); 
+    }
+    
+    main.accountformulier>div>form {
+        box-sizing: border-box;
+        width: calc(65% - 1rem); 
+    }
+    
+    main.accountformulier>div>form[action="inlogformulier"]>label {
+    margin-bottom: 2.5rem;
+    }
+    main.accountformulier>div>form[action="inlogformulier"]>label>input {
+    position: absolute;
+    left: 9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0rem;
+    padding: 0.7rem;
+    width: 60%;
+}
+    
+    main.accountformulier>div>form[action="inlogformulier"]>input, main.accountformulier>div>form[action="inlogformulier"]>a {
+    margin-left: 9rem;
+    }
+    
+    main.accountformulier>div>div {
+         box-sizing: border-box;
+        width: calc(30% - 0.5rem);
     }
     
 }
@@ -291,3 +431,8 @@ input:focus {
     }
     
 }
+
+/*Hier begint de CSS voor "inlog"*/
+
+
+
