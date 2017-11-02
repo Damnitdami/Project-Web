@@ -11,27 +11,57 @@
 <body>
 
     <header>
-        <img src="images/2000px-Logo_NS.svg.png" alt="logo ns">
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html"><img src="images/2000px-Logo_NS.svg.png" alt="logo ns"></a>
+                    </li>
+                    <li>
+                        <a href="inlog.html">Mijn verhalen</a>
+                    </li>
+                    <li>
+                        <a href="inlog.html"><img src="images/my%20account.svg" alt="accounticon"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main class="accountformulier">
         <h1>Aanmelden bij NS verhalen</h1>
 
-<div>
-        <form action="inlogformulier">
+        <div>
+            <form action="inlogformulier">
                 <h2>Aanmelden</h2>
-                <label>Naam
-                <input type="email" placeholder="Voornaam & achternaam" required>
-            </label>
-            <label>Email
-                <input type="email" placeholder="uwemail@adres.nl" required>
-            </label>
-            <label>Wachtwoord
-                <input type="password" required>
-            </label>
-            <input type="submit" value="Aanmelden">
-        </form>
-</div>
+                <fieldset>
+                    <label>Naam
+                        <input type="text" placeholder="Voornaam & achternaam" required>
+                    </label>
+                    <p class="feedback">Mooie naam!</p>
+                </fieldset>
+                <fieldset>
+                    <label>Email
+                        <input type="email" placeholder="uwemail@adres.nl" required>
+                    </label>
+                    <label>Wachtwoord
+                        <input type="password" required>
+                    </label>
+                    <p class="feedback">Welkom bij NS verhalen!</p>
+                </fieldset>
+                <input type="submit" value="Aanmelden">
+            </form>
+
+            <div>
+                <h3>Account aanmaken</h3>
+                <ul>
+                    <li>Bewaar uw favoriete verhalen</li>
+                    <li>Verhalen geschikt voor elk device</li>
+                    <li>Uw persoonlijke account beheren</li>
+                </ul>
+                <a href="aanmelden.html">Maak account aan</a>
+            </div>
+        </div>
     </main>
 </body>
 
