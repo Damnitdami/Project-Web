@@ -1,4 +1,4 @@
-/*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
+/*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/ /* global document */
 
 var voorgrondImage = document.querySelector('img.verberg');
 var button = document.getElementById("verbergbutton");
