@@ -1,1 +1,3 @@
 # Project-Web
+
+Reizigers willen zich onderweg  kunnen vermaken, of ze nou een boek meenemen of naar katten video’s kijken op hun smartphone. Voor dit project moesten wij een verhalen website ontwerpen. De verhalen website is uniek omdat het 99 versies biedt van hetzelfde verhaal, allemaal in een andere stijl geschreven. Dit zijn leuke stijloefeningen om te lezen tijdens het wachten, of tijdens een metro rit. Wij als ontwerpers moeten een responsive website creëren waar alle verhalen met een unieke vormgeving overzichtelijk getoond worden.  Elk verhaal biedt een unieke typografische layout die bij de sfeer past. Wij moeten ervoor zorgen dat de lezer een verhaal kan vinden die bij hem past, en op elk device een plezierige leeservaring heeft.
